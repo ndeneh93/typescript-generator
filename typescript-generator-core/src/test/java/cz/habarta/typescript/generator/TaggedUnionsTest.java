@@ -1,4 +1,9 @@
+package cz.habarta.typescript.generator;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.JsonNode;
+import java.util.TreeMap;
+import static org.junit.Assert.*;
 package cz.habarta.typescript.generator;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -221,7 +226,7 @@ public class TaggedUnionsTest {
         Assertions.assertEquals(expected, output);
     }
 
-    @Test
+  @Test
 public void testTaggedUnionsWithInterfaces() throws Exception {
     String jsonInput = "{\"InterfaceB\": \"type B = ...\", \"InterfaceA\": \"type A = ...\"}";
     ObjectMapper mapper = new ObjectMapper();
@@ -230,7 +235,7 @@ public void testTaggedUnionsWithInterfaces() throws Exception {
     jsonNode.fields().forEachRemaining(entry -> sortedMap.put(entry.getKey(), entry.getValue().asText()));
     String sortedJson = mapper.writeValueAsString(sortedMap);
     String output = generateTypeScript(sortedJson);
-    String expectedOutputWithSpecificOrder = "expected TypeScript output"; // Replace with actual expected output
+    String expectedOutputWithSpecificOrder = "expected TypeScript output"; 
     assertEquals(expectedOutputWithSpecificOrder, output);
 }
     @Test
@@ -688,4 +693,25 @@ public void testTaggedUnionsWithInterfaces() throws Exception {
     private static class Child2 extends Parent {
     }
 
+}
+package cz.habarta.typescript.generator;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.JsonNode;
+import java.util.TreeMap;
+import static org.junit.Assert.*;
+
+public class TaggedUnionsTest {
+    @Test
+    public void testTaggedUnionsWithInterfaces() throws Exception {
+        String jsonInput = "{\"InterfaceB\": \"type B = ...\", \"InterfaceA\": \"type A = ...\"}";
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode jsonNode = mapper.readTree(jsonInput);
+        TreeMap<String, String> sortedMap = new TreeMap<>();
+        jsonNode.fields().forEachRemaining(entry -> sortedMap.put(entry.getKey(), entry.getValue().asText()));
+        String sortedJson = mapper.writeValueAsString(sortedMap);
+        String output = generateTypeScript(sortedJson);
+        String expectedOutputWithSpecificOrder = "expected TypeScript output"; // Replace with actual expected output
+        assertEquals(expectedOutputWithSpecificOrder, output);
+    }
 }
