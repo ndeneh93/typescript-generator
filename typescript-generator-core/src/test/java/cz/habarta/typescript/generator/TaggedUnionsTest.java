@@ -1,4 +1,4 @@
-
+ls typescript-generator-core/src/test/java/cz/habarta/typescript/generator/
 package cz.habarta.typescript.generator;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
