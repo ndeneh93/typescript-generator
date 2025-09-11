@@ -1,0 +1,51 @@
+name: Confirm Flaky Test in Apache Pinot
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-flaky:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout IDoFT repository
+      uses: actions/checkout@v2
+
+    - name: Set up JDK 8
+      uses: actions/setup-java@v2
+      with:
+        java-version: '8'
+
+    - name: Clone Apache Pinot repository
+      run: |
+        git clone https://github.com/apache/pinot.git
+        cd pinot
+        git checkout master
+
+    - name: Compile Pinot controller module
+      run: |
+        cd pinot
+        mvn clean install -DskipTests -pl pinot-controller -am -Drat.skip=true -Dlicense.skip=true
+
+    - name: Run test normally
+      run: |
+        cd pinot
+        mvn -pl pinot-controller test -Dtest=org.apache.pinot.controller.api.resources.PinotTableRestletResourceTest#testGetTableConfigWithInvalidTableName -Drat.skip=true -Dlicense.skip=true
+
+    - name: Run test with NonDex
+      run: |
+        cd pinot
+        mvn -pl pinot-controller edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=org.apache.pinot.controller.api.resources.PinotTableRestletResourceTest#testGetTableConfigWithInvalidTableName -DnondexRuns=20 -Drat.skip=true -Dlicense.skip=true
+      continue-on-error: true  # Allow job to continue even if NonDex fails (indicating flakiness)
+
+    - name: Upload test logs
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-logs
+        path: |
+          pinot/pinot-controller/target/surefire-reports/*.txt
+          pinot/pinot-controller/target/nondex/*.txt
