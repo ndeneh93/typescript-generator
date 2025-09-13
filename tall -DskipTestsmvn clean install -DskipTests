@@ -1,0 +1,195 @@
+[33mcommit 49f9a326ba57d9da0b21d3aba799dbe15122361c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfix-flaky[m[33m, [m[1;31morigin/fix-flaky[m[33m)[m
+Author: ndenneh Chubu <ndeneh93@gmail.com>
+Date:   Sun Sep 7 17:49:40 2025 +0000
+
+    Fix flaky test testTaggedUnionsWithInterfaces by ensuring deterministic order
+
+[33mcommit caef58bfe55a8cd1fc5d7368c19e9ff818a7b7fa[m
+Author: Vojtěch Habarta <vojtech@habarta.cz>
+Date:   Sun Dec 6 21:04:18 2020 +0100
+
+    Enum member casing (#587)
+    - `enumMemberCasing` parameter (including Maven and Gradle plugins)
+    - improvements in splitting into words
+
+[33mcommit 323c1739c12635a9b919108e207e6b106de77df0[m
+Author: Jacob Parish <jrparish@users.noreply.github.com>
+Date:   Sun Dec 6 13:55:55 2020 -0600
+
+    Added setting for formatting enum keys in pascal case (#587)
+
+[33mcommit a52b4af87670b87895e6a5580ac32717f2d67fbc[m
+Author: Vojtěch Habarta <vojtech@habarta.cz>
+Date:   Sun Nov 29 10:40:19 2020 +0100
+
+    Tagged unions generated for EXISTING_PROPERTY discriminant (#582)
+
+[33mcommit fce528dea73473039e6906e41a9c2f9223fee894[m
+Author: Vojtěch Habarta <vojtech@habarta.cz>
+Date:   Fri Nov 20 23:16:53 2020 +0100
+
+    Spring `MultiValueMap` used as request parameter (#577)
+
+[33mcommit ff180a7851ec8a12537a7a1cfa1d7b783badaeb6[m[33m ([m[1;33mtag: [m[1;33mv2.27.744[m[33m)[m
+Author: Vojtěch Habarta <vojtech@habarta.cz>
+Date:   Tue Nov 17 14:11:32 2020 +0100
+
+    Preparation for version 2.27
+
+[33mcommit bb0e9630aa5746b40edc23206073098d04c4b358[m
+Author: Vojtěch Habarta <vojtech@habarta.cz>
+Date:   Tue Nov 17 13:55:29 2020 +0100
+
+    Read-only and write-only properties (Jackson2, JSDoc tags) (#579)
+
+[33mcommit 4b7d70b44ba640726f1028d37da7a5be4485812f[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu Nov 5 19:44:37 2020 +0100
+
+    Bump joda-time from 2.10.6 to 2.10.8 (#573)
+    
+    Bumps [joda-time](https://github.com/JodaOrg/joda-time) from 2.10.6 to 2.10.8.
+    - [Release notes](https://github.com/JodaOrg/joda-time/releases)
+    - [Changelog](https://github.com/JodaOrg/joda-time/blob/master/RELEASE-NOTES.txt)
+    - [Commits](https://github.com/JodaOrg/joda-time/compare/v2.10.6...v2.10.8)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+[33mcommit ca6c4194ae19582b507fcfb693e617e34d039270[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Nov 4 21:46:45 2020 +0100
+
+    Bump spring-boot-dependencies from 2.3.4.RELEASE to 2.3.5.RELEASE (#572)
+    
+    Bumps [spring-boot-dependencies](https://github.com/spring-projects/spring-boot) from 2.3.4.RELEASE to 2.3.5.RELEASE.
+    - [Release notes](https://github.com/spring-projects/spring-boot/releases)
+    - [Commits](https://github.com/spring-projects/spring-boot/compare/v2.3.4.RELEASE...v2.3.5.RELEASE)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+[33mcommit f4c9771bc4bab25a1a0e7f57cc0a399847c926ae[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Nov 4 21:27:59 2020 +0100
+
+    Bump checker-qual from 3.6.1 to 3.7.1 (#571)
+    
+    Bumps [checker-qual](https://github.com/typetools/checker-framework) from 3.6.1 to 3.7.1.
+    - [Release notes](https://github.com/typetools/checker-framework/releases)
+    - [Changelog](https://github.com/typetools/checker-framework/blob/master/changelog.txt)
+    - [Commits](https://github.com/typetools/checker-framework/compare/checker-framework-3.6.1...checker-framework-3.7.1)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+[33mcommit 12851a78f3c03786d3763e68670968b3ddb54b80[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Nov 4 20:46:51 2020 +0100
+
+    Bump junit from 4.13 to 4.13.1 (#567)
+    
+    Bumps [junit](https://github.com/junit-team/junit4) from 4.13 to 4.13.1.
+    - [Release notes](https://github.com/junit-team/junit4/releases)
+    - [Changelog](https://github.com/junit-team/junit4/blob/main/doc/ReleaseNotes4.13.1.md)
+    - [Commits](https://github.com/junit-team/junit4/compare/r4.13...r4.13.1)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+[33mcommit 44622fdb047761a0321f3c1f3de02f7234cb5250[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Nov 4 20:30:10 2020 +0100
+
+    Bump jackson2.version from 2.11.2 to 2.11.3 (#568)
+    
+    Bumps `jackson2.version` from 2.11.2 to 2.11.3.
+    
+    Updates `jackson-jaxrs-json-provider` from 2.11.2 to 2.11.3
+    
+    Updates `jackson-datatype-jdk8` from 2.11.2 to 2.11.3
+    
+    Updates `jackson-datatype-jsr310` from 2.11.2 to 2.11.3
+    
+    Updates `jackson-datatype-guava` from 2.11.2 to 2.11.3
+    - [Release notes](https://github.com/FasterXML/jackson-datatypes-collections/releases)
+    - [Commits](https://github.com/FasterXML/jackson-datatypes-collections/compare/jackson-datatypes-collections-2.11.2...jackson-datatypes-collections-2.11.3)
+    
+    Updates `jackson-datatype-joda` from 2.11.2 to 2.11.3
+    - [Release notes](https://github.com/FasterXML/jackson-datatype-joda/releases)
+    - [Commits](https://github.com/FasterXML/jackson-datatype-joda/compare/jackson-datatype-joda-2.11.2...jackson-datatype-joda-2.11.3)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+[33mcommit b00c9f2d48c0a8d4fc95622b0282339aefbb4f6b[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Wed Nov 4 19:40:24 2020 +0100
+
+    Bump guava from 29.0-jre to 30.0-jre (#566)
+    
+    Bumps [guava](https://github.com/google/guava) from 29.0-jre to 30.0-jre.
+    - [Release notes](https://github.com/google/guava/releases)
+    - [Commits](https://github.com/google/guava/commits)
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+[33mcommit c7e8de6a020851333003dbde715452c85b6bb4f5[m
+Author: Robin Stevens <73103348+robin-xyzt-ai@users.noreply.github.com>
+Date:   Wed Nov 4 19:18:09 2020 +0100
+
+    Issue #569: excludePropertyAnnotations not respected when using gson (#570)
+    
+    * Issue #569: excludePropertyAnnotations not respected when using gson
+    
+    The excludePropertyAnnotations property is not respected when using gson
+    as JsonLibrary.
+    
+    * Configured an exclusion strategy on the GsonParser to fix the issue
+    * Adjusted the IncludeExcludePropertyTest to reveal the issue and check
+    the fix.
+    
+    * Fixed checkstyle warnings
+
+[33mcommit 13fa08394b5837830669b6f957c9b1015fbac4f0[m
+Author: Vojtěch Habarta <vojtech@habarta.cz>
+Date:   Wed Oct 28 21:15:31 2020 +0100
+
+    Replaced usage of `Optional.isEmpty()` (not available on Java 8)
+
+[33mcommit 2067ddab69eccffcadd8565199f52ea0cde26f59[m
+Author: Vojtěch Habarta <vojtech@habarta.cz>
+Date:   Wed Oct 28 21:09:21 2020 +0100
+
+    Resolving subclasses of generic "known" classes (like Map) #556
+
+[33mcommit 52b6bc162bc170a97fda19a0658d5b312b32107b[m
+Author: Michiel Haisma <michiel.haisma@oracle.com>
+Date:   Tue Oct 20 15:20:01 2020 +0200
+
+    Failing test case for issue #556.
+
+[33mcommit b5aaa2c72f86901d76186bcd754978787a8c475e[m
+Author: cbrethes <nisouille@hotmail.com>
+Date:   Thu Oct 1 08:24:31 2020 +0200
+
+    Javadoc generation : use field's javadoc as a default when no javadoc is (#552)
+    
+    found on getter/setter
+    
+    Co-authored-by: Christophe Brethes <christophe.brethes@yuzzitpro.com>
+
+[33mcommit 4cc24ac9e0f6cecb5c40a0a2adb5a4cc89a2d19b[m[33m ([m[1;33mtag: [m[1;33mv2.26.723[m[33m)[m
+Author: Vojtěch Habarta <vojtech@habarta.cz>
+Date:   Tue Sep 29 20:35:55 2020 +0200
+
+    Preparation for version 2.26
+
+[33mcommit 68e906b73c95f88
